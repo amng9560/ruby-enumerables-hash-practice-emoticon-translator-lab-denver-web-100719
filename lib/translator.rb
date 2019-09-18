@@ -6,6 +6,7 @@ def load_library(path)
   emoticon_hash = Hash.new
   emoticon_hash['get_meaning'] = Hash.new
   emoticon_hash['get_emoticon'] = Hash.new
+  
 end
 
 def get_japanese_emoticon
