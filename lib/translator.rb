@@ -18,8 +18,11 @@ end
 def get_japanese_emoticon(emoticon_file = './lib/emoticons.yml', emoticon)
   # code goes here
   emoticon_lib = load_library(emoticon_file)
-  japanese_emoticon = emoticon_lib['get_meaning'][emoticon]
-  english_meaning ? english_meaning : 'Sorry, that emoticon was not found'
+  result = emoticon_lib['get_meaning'][emoticon]
+  if result == nil
+    result = "Sorry, that emoticon was not found"
+  end
+  result
 end
 
 def get_english_meaning
