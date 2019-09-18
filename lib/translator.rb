@@ -17,7 +17,7 @@ end
 
 def get_japanese_emoticon(emoticon_file, emoticon)
   # code goes here
-  emoticon_lib = load_library(emoticon_file)
+  emoticon_lib = load_library('./lib/emoticons.yml')
   japanese_emoticon = emoticon_lib['get_meaning'][emoticon]
   english_meaning ? english_meaning : 'Sorry, that emoticon was not found'
 end
